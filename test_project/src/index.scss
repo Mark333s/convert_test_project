@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+body {
+  background-color: #ffffff;
+}
+
+* {
+  font-family: 'Inter', system-ui !important;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  width: 100%;
+  margin-top: 4%;
+  height: 30%;
+  background-color: rgb(196, 196, 196);
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(15, 3, 187, 0.05);
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  background: #2b16b6;
+}
+
+.block {
+  input {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 20px 20px;
+    letter-spacing: 1.3px;
+    outline: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 100%;
+  }
+}
+
+.currencies {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+
+  li {
+    display: inline-flex;
+    padding: 10px 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    justify-content: center;
+    flex: 1;
+
+    &:hover {
+      background-color: rgba(21, 0, 182, 0.268);
+      border-radius: 5px;
+    }
+
+    &:active {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    &.active {
+      background-color: #4e3cc1;
+      border-radius: 5px;
+      color: #fff;
+    }
+
+    &:last-of-type {
+      display: inline-flex;
+      align-items: center;
+      flex: 0 0 50px;
+      border-right: 0;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
